@@ -1,88 +1,115 @@
-const numbers = [1, 2, 3, 4, 5, 4, 4, 6];
-console.log(numbers.indexOf(2));
-console.log(numbers.lastIndexOf(4));
-console.log(numbers.splice(4, 'e', 't'));
-console.log(numbers.indexOf(2) !== -1);
+// const numbers = [1, 2, 3, 4, 5, 4, 4, 6];
+// console.log(numbers.indexOf(2));
+// console.log(numbers.lastIndexOf(4));
+// console.log(numbers.splice(4, "e", "t"));
+// console.log(numbers.indexOf(2) !== -1);
 
-const courses = [
-   { id: '1', name: 'b'},
-   {id: '2', name:'a'}
-];
-const ab = courses.find(function(course) {
-return course.name === 'b'
-});
-console.log(ab);
-//arrow function
-const arrFunc = courses.find(course => course.name === 'b');
+// const courses = [
+//   { id: "1", name: "b" },
+//   { id: "2", name: "a" },
+// ];
+// const ab = courses.find(function (course) {
+//   return course.name === "b";
+// });
+// console.log(ab);
+// //arrow function
+// const arrFunc = courses.find((course) => course.name === "b");
 
+// //emptying an array;
+// // 1
+// let number = [2, 4, 6, 8];
+// number = [];
+// //2
+// number.length = 0;
 
-//emptying an array;
-// 1
-let number = [2, 4, 6, 8];
-number = [];
-//2
-number.length = 0;
+// //concat
+// let abc = [1, 2, 3];
+// let cde = [4, 5, 6];
 
+// const abcde = abc.concat(cde);
+// console.log(abcde);
 
-//concat
-let abc = [1, 2, 3];
-let cde = [4, 5, 6];
+// //slice;
+// const slice = abc.slice(1, 3);
+// console.log(slice);
 
-const abcde = abc.concat(cde);
-console.log(abcde);
+// //easy way to combine arrays;
+// const combined = [...abc, "sing", ...cde];
+// console.log(combined);
 
-//slice;
-const slice = abc.slice(1, 3);
-console.log(slice);
+// const copied = [...combined];
 
-//easy way to combine arrays;
-const combined = [...abc, 'sing', ...cde];
-console.log(combined);
+// // for of;
+// for (number of numbers) {
+//   console.log(number);
+// }
 
-const copied = [...combined];
+// //forEach()
+// numbers.forEach((number, index) => console.log(index, number));
 
-// for of;
-for (number of numbers){
-    console.log(number);
-};
+// //join()
 
-//forEach()
-numbers.forEach((number, index) => console.log(index, number));
+// let num = [1, 8, 9, 0];
+// let joins = num.join(",");
+// console.log(joins);
 
-//join()
+// //split();
 
-let num = [1, 8, 9, 0];
-let joins = num.join(',');
-console.log(joins);
+// let message = "My name is Sarah";
+// let splits = message.split(" ");
+// console.log(splits);
+// //reverse();
+// let reverse = num.reverse();
+// console.log(reverse);
 
-//split();
+// //sort();
 
-let message = 'My name is Sarah';
-let splits = message.split(' ');
-console.log(splits);
-//reverse();
-let reverse = num.reverse();
-console.log(reverse);
+// let sort = num.sort();
+// console.log(sort);
 
+// // sort() in object;
 
-//sort();
+// const course = [
+//   { id: 1, name: "Node.js" },
+//   { id: 2, name: "JavaScript" },
+// ];
 
-let sort = num.sort();
-console.log(sort);
+// course.sort(function (a, b) {
+//   const nameA = a.name.toUpperCase();
+//   const nameB = b.name.toUpperCase();
 
-// sort() in object;
+//   if (nameA < nameB) return -1;
+//   if (nameA > nameB) return 1;
+//   return 0;
+// });
+// console.log(course);
 
-const course = [
-    { id: 1, name: 'Node.js'},
-    { id: 2, name: 'JavaScript'}
-];
+// //Ex. Array from range
+// function arrayFromRange(min, max) {
+//   const output = [];
+//   for (let i = min; i <= max; i++) output.push(i);
+//   return output;
+// }
+// const numbs = arrayFromRange(-13, 7);
+// console.log(numbs);
 
-course.sort(function(a, b) {
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
+//Ex. Includes;
 
-    if(nameA < nameB) return -1;
-    if(nameA > nameB) return 1;
-    return 0
-});
-console.log(course);
+// function includes(array, searchElement) {
+//   for (let numbr of array) if (numbr === searchElement) return true;
+//   return false;
+// }
+// const arrr = includes([1, 3, 5, 8], 9);
+// console.log(arrr);
+
+//Ex. Except
+
+function except(array, excluded) {
+  const output = [];
+  for (let element of array)
+    if (!excluded.includes(element)) output.push(element);
+  return output;
+}
+const numbers = [1, 3, 5, 6, 8];
+const outp = except(numbers, [1, 6]);
+console.log(outp);
