@@ -116,11 +116,33 @@
 
 //Exercise Count Occurrence
 
-function countOccurrence(array, searchElement) {
-  let countt = 0;
-  for (let element of array) if (element === searchElement) countt++;
-  return countt;
+// function countOccurrence(array, searchElement) {
+//   let countt = 0;
+//   for (let element of array) if (element === searchElement) countt++;
+//   return countt;
+// }
+// const numbers = [1, 2, 3, 4, 1];
+// const count = countOccurrence(numbers, -1);
+// console.log(count);
+
+// function countOccurrence(array, searchElement) {
+//   return array.reduce((accumulator, current) => {
+//     const occurrence = current === searchElement ? 1 : 0;
+//     console.log(accumulator, current, searchElement);
+//     return accumulator + occurrence;
+//   }, 0);
+// }
+
+//Ex. Getmax
+
+const numbers = [1, 2, 3, 4];
+const max = getMax([1, 2, 3]);
+console.log(max);
+
+function getMax(array) {
+  if (array.length === 0) return undefined;
+  let max = array[0];
+
+  for (let i = 1; i < array.length; i++) if (array[i] > max) max = array[i];
+  return max;
 }
-const numbers = [1, 2, 3, 4, 1];
-const count = countOccurrence(numbers, -1);
-console.log(count);
