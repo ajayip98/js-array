@@ -104,12 +104,23 @@
 
 //Ex. Except
 
-function except(array, excluded) {
-  const output = [];
-  for (let element of array)
-    if (!excluded.includes(element)) output.push(element);
-  return output;
+// function except(array, excluded) {
+//   const output = [];
+//   for (let element of array)
+//     if (!excluded.includes(element)) output.push(element);
+//   return output;
+// }
+// const numbers = [1, 3, 5, 6, 8];
+// const outp = except(numbers, [1, 6]);
+// console.log(outp);
+
+//Exercise Count Occurrence
+
+function countOccurrence(array, searchElement) {
+  let countt = 0;
+  for (let element of array) if (element === searchElement) countt++;
+  return countt;
 }
-const numbers = [1, 3, 5, 6, 8];
-const outp = except(numbers, [1, 6]);
-console.log(outp);
+const numbers = [1, 2, 3, 4, 1];
+const count = countOccurrence(numbers, -1);
+console.log(count);
