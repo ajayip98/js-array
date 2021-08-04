@@ -151,18 +151,26 @@
 //   return array.reduce((a, b) => (a > b ? a : b));
 // }
 
-//Wx. movies;
-const movies = [
-  { title: "a", year: 2018, rating: 4.5 },
-  { title: "b", year: 2018, rating: 4.7 },
-  { title: "c", year: 2018, rating: 3 },
-  { title: "d", year: 2017, rating: 4.5 },
-];
+//Ex. movies;
+// const movies = [
+//   { title: "a", year: 2018, rating: 4.5 },
+//   { title: "b", year: 2018, rating: 4.7 },
+//   { title: "c", year: 2018, rating: 3 },
+//   { title: "d", year: 2017, rating: 4.5 },
+// ];
 
-const titles = movies
-  .filter((m) => m.year === 2018 && m.rating >= 4)
-  .sort((a, b) => a.rating - b.rating)
-  .reverse()
-  .map((m) => m.title);
+// const titles = movies
+//   .filter((m) => m.year === 2018 && m.rating >= 4)
+//   .sort((a, b) => a.rating - b.rating)
+//   .reverse()
+//   .map((m) => m.title);
 
-console.log(titles);
+// console.log(titles);
+
+function sum(...args) {
+  let total = 0;
+  for (let value of args) total += value;
+  return total;
+}
+const sumOfarguments = Array.isArray(sum([1, 2, 5]));
+console.log(sumOfarguments);
