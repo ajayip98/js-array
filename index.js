@@ -183,3 +183,14 @@ function summ(...items) {
   return items.reduce((a, b) => a + b);
 }
 console.log(summ([1, 3, 6]));
+
+//Ex. circle of radius
+
+const circle = {
+  radius: 3,
+  get area() {
+    return Math.PI * this.radius * this.radius;
+  },
+};
+
+console.log(circle.area);
