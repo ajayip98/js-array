@@ -167,10 +167,19 @@
 
 // console.log(titles);
 
+//Exerc. Sum of arguments
+
 function sum(...args) {
   let total = 0;
   for (let value of args) total += value;
   return total;
 }
-const sumOfarguments = Array.isArray(sum([1, 2, 5]));
+const sumOfarguments = sum(1, 2, 5);
 console.log(sumOfarguments);
+
+// reduce method
+function summ(...items) {
+  if (items.length === 1 && Array.isArray(items[0])) items = [...items[0]];
+  return items.reduce((a, b) => a + b);
+}
+console.log(summ([1, 3, 6]));
